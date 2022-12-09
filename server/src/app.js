@@ -11,7 +11,9 @@ import loadDb from './modules/loadDb.js';
 // dependencies
 import express from 'express';
 import http from 'http';
+import https from 'https';
 import cors from 'cors';
+import fs from 'fs';
 
 // Import Routes
 import { router as eventsRouter } from './routes/eventsRouter.js';
@@ -109,8 +111,32 @@ export const startOSCServer = async (overrideConfig = null) => {
   initiateOSC(oscSettings);
 };
 
+var privateKey;
+var certificate;
+var credentials;
+
+try
+{
+
+  privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
+  certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
+  credentials = {key: privateKey, cert: certificate};
+}
+catch(e)
+{
+  credentials = null;
+}
+
+var server;
 // create HTTP server
-const server = http.createServer(app);
+if(credentials != null)
+{
+  server = https.createServer(credentials, app);
+}
+else
+{
+  server = http.createServer(app);
+}
 
 /**
  * @description Starts all necessary services
