@@ -1,4 +1,4 @@
-[![ontime_test_CI](https://github.com/cpvalente/ontime/actions/workflows/ontime_cy.yml/badge.svg)](https://github.com/cpvalente/ontime/actions/workflows/ontime_cy.yml) [![Ontime build](https://github.com/cpvalente/ontime/actions/workflows/build.yml/badge.svg)](https://github.com/cpvalente/ontime/actions/workflows/build.yml)
+[![ontime_test_CI](https://github.com/TrumbaturiMichael/ontime/actions/workflows/ontime_cy.yml/badge.svg)](https://github.com/TrumbaturiMichael/ontime/actions/workflows/ontime_cy.yml) [![Ontime build](https://github.com/TrumbaturiMichael/ontime/actions/workflows/build.yml/badge.svg)](https://github.com/TrumbaturiMichael/ontime/actions/workflows/build.yml)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-green.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Documentation in Gitbook](https://badges.aleen42.com/src/gitbook_2.svg)](https://cpvalente.gitbook.io/ontime/)
 
 ## Download the latest releases here
