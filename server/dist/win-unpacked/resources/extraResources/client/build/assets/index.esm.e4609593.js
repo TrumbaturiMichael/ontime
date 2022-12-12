@@ -1,0 +1,1 @@
+import{ab as u,r as c}from"./index.884ef809.js";function S(p){const{value:n,defaultValue:d,onChange:f,shouldUpdate:i=(t,r)=>t!==r}=p,s=u(f),l=u(i),[C,b]=c.exports.useState(d),o=n!==void 0,e=o?n:C,h=c.exports.useCallback(t=>{const a=typeof t=="function"?t(e):t;!l(e,a)||(o||b(a),s(a))},[o,s,e,l]);return[e,h]}export{S as u};

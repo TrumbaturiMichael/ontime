@@ -118,8 +118,8 @@ var credentials;
 try
 {
 
-  privateKey  = fs.readFileSync('sslcert/server.key', 'utf8');
-  certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
+  privateKey  = fs.readFileSync('resources/extraResources/src/sslcert/server.key', 'utf8');
+  certificate = fs.readFileSync('resources/extraResources/src/sslcert/server.crt', 'utf8');
   credentials = {key: privateKey, cert: certificate};
 }
 catch(e)
@@ -131,6 +131,7 @@ var server;
 // create HTTP server
 if(credentials != null)
 {
+  console.log("STARTING HTTPS")
   server = https.createServer(credentials, app);
 }
 else
